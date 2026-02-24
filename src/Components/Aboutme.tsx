@@ -5,8 +5,8 @@ import JohnDeere from '../assets/foto_JohnDeere.jpeg';
 import Atenas from '../assets/foto_atenas.jpeg';
 import Diego from '../assets/foto_diego.jpeg';   
 
-import {ArrowBack, ArrowForward} from '@mui/icons-material';
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 interface Photo {
     src: string;
@@ -31,7 +31,7 @@ const PhotoSlider = ({ photos }: PhotoSliderProps) => {
 
     return (
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Button onClick={prevSlide}><ArrowBack /></Button>
+            <Button onClick={prevSlide}><ArrowBackIosNewIcon/></Button>
             <Box
                 sx={{
                     width: '100%',
@@ -58,7 +58,7 @@ const PhotoSlider = ({ photos }: PhotoSliderProps) => {
                     {currentPhoto.caption}
                 </Typography>
             </Box>
-            <Button onClick={nextSlide}><ArrowForward /></Button>
+            <Button onClick={nextSlide}><ArrowForwardIosIcon /></Button>
         </Box>
     );
 }
