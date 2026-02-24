@@ -12,7 +12,7 @@ const Footer = () => {
             <Container maxWidth="sm">
                 <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
                     <EmailIcon fontSize ="small"/>
-                    <a href="mailto:ronalddena@gmail.com"></a>
+                    <a href="mailto:ronalddena@gmail.com">ronalddena@gmail.com</a>
                 </Stack>
                 <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
                     <PhoneIcon fontSize ="small"/>

@@ -8,7 +8,7 @@ export interface repoProps{
 }
 
 
-    const Projects = () => {
+    const Project = () => {
         const [repos, setRepos] = useState<repoProps[]>([])
     const[loading, setLoading] = useState(true);
         useEffect(() => {
@@ -75,5 +75,5 @@ export interface repoProps{
    ) 
 }
 
-export {Projects}
+export {Project}
 

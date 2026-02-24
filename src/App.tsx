@@ -3,24 +3,24 @@ import './App.css';
 import { AppBar, Toolbar, Typography, Button} from '@mui/material';
 import {Aboutme} from './Components/Aboutme'
 import {Contact} from './Components/Contact'
-import {Projects} from './Components/Project'
+import {Project} from './Components/Project'
 import  {Footer} from './Components/Footer'
 function App() {
   return (
     <div>
-        <AppBar position='static' color='error'>
+        <AppBar position='static' sx={{backgroundColor: '#1d5e97ff'}}>
           <Toolbar>
-            <Typography variant='h4' sx={{color: 'black', flexGrow: 1}}> Ronald Dena</Typography>
+            <Typography variant='h4' sx={{color: 'white', flexGrow: 1}}> Ronald Dena</Typography>
               <Button>
-                <Typography variant='h6' sx={{color: 'black'}}> About me </Typography>
+                <Typography variant='h6' sx={{color: 'white'}}> About me </Typography>
               </Button>
               <Button>
-                <Typography variant='h6' sx={{color: 'black'}}> contact </Typography>
+                <Typography variant='h6' sx={{color: 'white'}}> contact </Typography>
               </Button>
           </Toolbar>
         </AppBar>
     <Aboutme/>
-    <Projects/>
+    <Project/>
     <Footer/>
     </div>
   );
