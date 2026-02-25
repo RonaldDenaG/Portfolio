@@ -8,23 +8,25 @@ export interface repoProps{
 }
 
 
-    const Project = () => {
+    const Project = ({ githubUsername = 'RonaldDenaG' }: { githubUsername?: string }) => {
         const [repos, setRepos] = useState<repoProps[]>([])
     const[loading, setLoading] = useState(true);
         useEffect(() => {
         const fetchRepos = async () => {
             try {
-                const response = await fetch('');
+                const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?per_page=30&sort=updated`);
+                if (!response.ok) throw new Error(`GitHub API responded with ${response.status}`);
                 const data = await response.json();
-                setRepos(data);
+                setRepos(data || []);
             } catch (error) {
                 console.log('Error fetching repos:', error);
+                setRepos([]);
             } finally {
                 setLoading(false);
             }
         };
         fetchRepos();
-    }, []);
+    }, [githubUsername]);
 
     if(loading){
         return(

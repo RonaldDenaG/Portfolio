@@ -3,6 +3,7 @@ import './App.css';
 import { AppBar, Toolbar, Typography, Button} from '@mui/material';
 import {Aboutme} from './Components/Aboutme'
 import {Contact} from './Components/Contact'
+import {Technologies} from './Components/Technologies'
 import {Project} from './Components/Project'
 import  {Footer} from './Components/Footer'
 function App() {
@@ -17,10 +18,17 @@ function App() {
               <Button>
                 <Typography variant='h6' sx={{color: 'white'}}> contact </Typography>
               </Button>
+              <Button>
+                <Typography variant='h6' sx={{color: 'white'}}> Tecnologies </Typography>
+              </Button>
+              <Button>
+                <Typography variant='h6' sx={{color: 'white'}}> Projects </Typography>
+              </Button>
           </Toolbar>
         </AppBar>
     <Aboutme/>
-    <Project/>
+    <Technologies/>
+    <Project githubUsername="RonaldDenaG" />
     <Footer/>
     </div>
   );
