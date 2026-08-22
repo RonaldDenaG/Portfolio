@@ -1,7 +1,7 @@
 
 import './App.css';
-import { AppBar, Toolbar, Typography, Button} from '@mui/material';
-import {Aboutme} from './Components/Aboutme'
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Aboutme } from './Components/Aboutme'
 import {Contact} from './Components/Contact'
 import {Technologies} from './Components/Technologies'
 import {Project} from './Components/Project'
