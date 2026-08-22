@@ -56,7 +56,7 @@ export interface repoProps{
                         '&::-webkit-scrollbar-thumb': {
                             backgroundColor: 'rgba(0,0,0,0.3)',
                             borderRadius: 4,
-                        },
+                        },                 
                     }}>
                     {repos.map(repo => (
                               <Card key={repo.id} sx={{ minWidth: 300, maxWidth: 350, flexShrink: 0, borderRadius: 2, boxShadow: 3 }}>

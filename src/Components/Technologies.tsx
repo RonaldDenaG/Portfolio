@@ -11,6 +11,7 @@ const Technologies: React.FC = () => {
         'TypeScript',
         'React',
         'SQL',
+        'Java',
     ];
 
     const colorMap: Record<string, string> = {
@@ -21,6 +22,7 @@ const Technologies: React.FC = () => {
         TypeScript: '#3178C6',
         React: '#61DAFB',
         SQL: '#003B57',
+        Java: '#cb0c28',
     };
 
     return (
@@ -29,11 +31,10 @@ const Technologies: React.FC = () => {
                 Technologies
             </Typography>
 
-            <Grid container spacing={2} alignItems="stretch">
+            <Grid container spacing={6} alignItems="stretch">
                 {technologies.map((tech) => (
                     <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={tech}>
                         <Paper
-                            elevation={1}
                             sx={{
                                 display: 'flex',
                                 alignItems: 'center',
