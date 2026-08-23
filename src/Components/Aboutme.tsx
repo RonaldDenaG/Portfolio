@@ -54,7 +54,7 @@ const PhotoSlider = ({ photos }: PhotoSliderProps) => {
                         borderRadius: '10px',
                     }}
                 />
-                <Typography variant="subtitle1" sx={{ mt: 1, textAlign: 'center' }}>
+                <Typography variant="h5" sx={{ mt: 1, textAlign: 'center' }}>
                     {currentPhoto.caption}
                 </Typography>
             </Box>
@@ -71,7 +71,7 @@ export const Aboutme = () => {
         { src: Atenas, caption: 'My dog atenas :)' },
     ];
     return (
-        <Box sx={{ mt: '2', mb: '2', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly', p: 2 }}>
+        <Box sx={{ mt: '2', mb: '2', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly', p: 3 }}>
             <Typography variant="h4">
                 About me
             </Typography>

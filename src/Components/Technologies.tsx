@@ -12,6 +12,10 @@ const Technologies: React.FC = () => {
         'React',
         'SQL',
         'Java',
+        'AWS',
+        'Docker',
+        'Rest API',
+        'jest testing',
     ];
 
     const colorMap: Record<string, string> = {
@@ -23,6 +27,10 @@ const Technologies: React.FC = () => {
         React: '#61DAFB',
         SQL: '#003B57',
         Java: '#cb0c28',
+        AWS: '#e38a3c',
+        Docker: '#003B57',
+        'Rest API': '#637075',
+        'jest testing': '#f9a7b9',
     };
 
     return (

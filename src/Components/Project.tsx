@@ -36,12 +36,15 @@ export interface repoProps{
         )
     }
    return(
-    <Box>
-            <Typography variant="h4" gutterBottom>Projects</Typography>
-            {loading ? (
-                <Typography>Loading...</Typography>
-            ) :  (
-                <Box sx={{
+    <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '25vh'}}>
+        <Typography variant="h4" gutterBottom sx={{mb: 2}}>
+            Projects
+        </Typography>
+            {loading ? 
+            (<Typography>Loading...</Typography>) :  
+            (
+                 <Box 
+                    sx={{
                         display: 'flex',
                         overflowX: 'auto',
                         gap: 2,
@@ -58,22 +61,22 @@ export interface repoProps{
                             borderRadius: 4,
                         },                 
                     }}>
-                    {repos.map(repo => (
-                              <Card key={repo.id} sx={{ minWidth: 300, maxWidth: 350, flexShrink: 0, borderRadius: 2, boxShadow: 3 }}>
-            <CardContent>
-                <Typography variant="h6" gutterBottom>{repo.name}</Typography>
-                <Typography variant="body2" color="text.secondary">{repo.description || 'No description available'}</Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small" href={repo.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</Button>
-            </CardActions>
-        </Card>
+                        {repos.map(repo => (
+                        <Card key={repo.id} sx={{ minWidth: 300, maxWidth: 350, flexShrink: 0, borderRadius: 2, boxShadow: 3 }}>
+                            <CardContent>
+                             <Typography variant="h6" gutterBottom>{repo.name}</Typography>
+                             <Typography variant="body2" color="text.secondary">{repo.description || 'No description available'}</Typography>
+                            </CardContent>
+                            <CardActions>
+                             <Button size="small" href={repo.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</Button>
+                            </CardActions>
+                        </Card>  
                         
                     ))}
                
-                    </Box>
+                </Box>
             )}
-        </Box>
+    </Box>
    ) 
 }
 
