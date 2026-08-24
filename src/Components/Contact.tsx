@@ -1,5 +1,5 @@
 import {ChangeEvent} from "react";
-import React, { useEffect } from "react";
+import React from "react";
 import {Box, Button, TextField, Typography, Alert} from "@mui/material";
 import emailjs from '@emailjs/browser';
 
@@ -17,10 +17,6 @@ const Contact   = () => {
     });
     const [loading, setLoading] = React.useState(false);
     const [status, setStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
-
-    useEffect(() => {
-        emailjs.init('ETXy4gM9wumTUy8aJ'); 
-    }, []);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         SetFormData({...formData, [e.target.name]: e.target.value});
@@ -41,7 +37,8 @@ const Contact   = () => {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
-                }
+                },
+                'ETXy4gM9wumTUy8aJ'
             );
             setStatus('success');
             SetFormData({name: '', email: '', message: ''});
