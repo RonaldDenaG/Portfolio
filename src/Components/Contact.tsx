@@ -1,6 +1,6 @@
 import {ChangeEvent} from "react";
 import React from "react";
-import {Box, Button, TextField, Typography, Alert} from "@mui/material";
+import {Box, Button, TextField, Typography, Alert, Paper} from "@mui/material";
 import emailjs from '@emailjs/browser';
 
 interface FormData{
@@ -61,9 +61,28 @@ const Contact   = () => {
     }
 
 return (
-    <Box sx={{display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', justifyContent: 'center', py: 4, maxWidth: 600, mx: 'auto'}}>
-        <Typography variant="h4">
-            Contact!
+    <Paper
+        elevation={0}
+        sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            alignItems: 'center',
+            justifyContent: 'center',
+            py: { xs: 3, md: 4 },
+            px: { xs: 2, sm: 3 },
+            maxWidth: 720,
+            mx: 'auto',
+            borderRadius: 4,
+            border: '1px solid rgba(16, 66, 112, 0.14)',
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(245,250,255,0.95) 100%)',
+        }}
+    >
+        <Typography variant="h4" sx={{ fontWeight: 800, fontSize: { xs: '1.8rem', md: '2.2rem' } }}>
+            Contact
+        </Typography>
+        <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center', mb: 0.5 }}>
+            Tell me about your project or collaboration idea.
         </Typography>
         
         {status === 'success' && <Alert severity="success">Message sent successfully!</Alert>}
@@ -97,11 +116,11 @@ return (
                 fullWidth
                 required
             />
-            <Button type="submit" variant="contained" disabled={loading}>
+            <Button type="submit" variant="contained" disabled={loading} sx={{ py: 1.2, borderRadius: 2 }}>
                 {loading ? 'Sending...' : 'Submit'}
             </Button>
         </form>
-    </Box>
+    </Paper>
 )
 
 }
