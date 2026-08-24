@@ -17,6 +17,7 @@ const Contact   = () => {
     });
     const [loading, setLoading] = React.useState(false);
     const [status, setStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = React.useState('');
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         SetFormData({...formData, [e.target.name]: e.target.value});
@@ -26,6 +27,7 @@ const Contact   = () => {
         e.preventDefault();
         setLoading(true);
         setStatus('idle');
+        setErrorMessage('');
 
         try {
             
@@ -46,6 +48,7 @@ const Contact   = () => {
         } catch (error) {
             console.error('Error sending email:', error);
             setStatus('error');
+            setErrorMessage(error instanceof Error ? error.message : 'EmailJS could not send the message.');
             setTimeout(() => setStatus('idle'), 3000);
         } finally {
             setLoading(false);
@@ -59,7 +62,7 @@ return (
         </Typography>
         
         {status === 'success' && <Alert severity="success">Message sent successfully!</Alert>}
-        {status === 'error' && <Alert severity="error">Error sending message. Please try again.</Alert>}
+        {status === 'error' && <Alert severity="error">{errorMessage || 'Error sending message. Please try again.'}</Alert>}
         
         <form onSubmit={handleSubmit} style={{width: '100%', display: 'flex', flexDirection: 'column', gap: 16}}>
             <TextField 
