@@ -48,7 +48,12 @@ const Contact   = () => {
         } catch (error) {
             console.error('Error sending email:', error);
             setStatus('error');
-            setErrorMessage(error instanceof Error ? error.message : 'EmailJS could not send the message.');
+            const emailjsError = error as { text?: string; status?: number };
+            setErrorMessage(
+                error instanceof Error
+                    ? error.message
+                    : emailjsError.text || `EmailJS request failed${emailjsError.status ? ` (${emailjsError.status})` : ''}.`
+            );
             setTimeout(() => setStatus('idle'), 3000);
         } finally {
             setLoading(false);
