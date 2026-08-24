@@ -32,7 +32,7 @@ const Contact   = () => {
         try {
             
             await emailjs.send(
-                'service_pnvxd35',      
+                'service_zudqkre',
                 'template_zw7jfqv',     
                 {
                     to_email: 'ronalddenag@gmail.com', 
