@@ -55,8 +55,8 @@ function App() {
                 Contact
               </Button>
               <Button
-                href="/cv.pdf"
-                download="Ronald-Dena-CV.pdf"
+                href="/Ronald_Dena_CV.pdf"
+                download="Ronald_Dena_C.pdf"
                 startIcon={<DownloadIcon />}
                 sx={{ color: 'white', px: { xs: 1, sm: 2 } }}
               >
@@ -93,7 +93,7 @@ function App() {
               <ListItemButton component="a" href="#contact" onClick={closeDrawer}>
                 <ListItemText primary="Contact" />
               </ListItemButton>
-              <ListItemButton component="a" href="/cv.pdf" download="Ronald-Dena-CV.pdf" onClick={closeDrawer}>
+              <ListItemButton component="a" href="/Ronald_Dena_CV.pdf" download="Ronald_Dena_CV.pdf" onClick={closeDrawer}>
                 <DownloadIcon sx={{ mr: 1 }} />
                 <ListItemText primary="Download CV" />
               </ListItemButton>
