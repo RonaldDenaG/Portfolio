@@ -1,6 +1,6 @@
 import {ChangeEvent} from "react";
 import React from "react";
-import {Box, Button, TextField, Typography, Alert, Paper} from "@mui/material";
+import {Button, TextField, Typography, Alert, Paper} from "@mui/material";
 import emailjs from '@emailjs/browser';
 
 interface FormData{
