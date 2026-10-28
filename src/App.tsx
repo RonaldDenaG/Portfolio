@@ -41,6 +41,9 @@ function App() {
           }}
         >
           <Toolbar sx={{
+            width: '100%',
+            maxWidth: 1280,
+            mx: 'auto',
             flexWrap: 'wrap',
             gap: { xs: 0.5, md: 1 },
             justifyContent: 'space-between',
@@ -111,8 +114,8 @@ function App() {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer anchor="right" open={drawerOpen} onClose={closeDrawer}>
-          <Box sx={{ width: 260 }} role="presentation">
+        <Drawer anchor="right" open={drawerOpen} onClose={closeDrawer} PaperProps={{ sx: { width: 280, bgcolor: '#f7fbff' } }}>
+          <Box sx={{ width: '100%' }} role="presentation">
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
               <IconButton aria-label="Close navigation menu" onClick={closeDrawer}>
                 <CloseIcon />
@@ -132,13 +135,13 @@ function App() {
               <ListItemButton component="a" href="#technologies" onClick={closeDrawer}>
                 <ListItemText primary="Technologies" />
               </ListItemButton>
-              <ListItemButton component="a" href="#projects" onClick={closeDrawer}>
+              <ListItemButton component="a" href="#projects" onClick={closeDrawer} sx={drawerItemSx}>
                 <ListItemText primary="Projects" />
               </ListItemButton>
-              <ListItemButton component="a" href="#contact" onClick={closeDrawer}>
+              <ListItemButton component="a" href="#contact" onClick={closeDrawer} sx={drawerItemSx}>
                 <ListItemText primary="Contact" />
               </ListItemButton>
-              <ListItemButton component="a" href="/Ronald_Dena_CV.pdf" download="Ronald_Dena_CV.pdf" onClick={closeDrawer}>
+              <ListItemButton component="a" href="/Ronald_Dena_CV.pdf" download="Ronald_Dena_CV.pdf" onClick={closeDrawer} sx={drawerItemSx}>
                 <DownloadIcon sx={{ mr: 1 }} />
                 <ListItemText primary="Download CV" />
               </ListItemButton>

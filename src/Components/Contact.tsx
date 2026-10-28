@@ -1,6 +1,6 @@
 import {ChangeEvent} from "react";
 import React from "react";
-import {Box, Button, TextField, Typography, Alert} from "@mui/material";
+import {Button, TextField, Typography, Alert, Paper} from "@mui/material";
 import emailjs from '@emailjs/browser';
 
 interface FormData{
@@ -106,11 +106,11 @@ return (
                 fullWidth
                 required
             />
-            <Button type="submit" variant="contained" disabled={loading}>
+            <Button type="submit" variant="contained" disabled={loading} sx={{ py: 1.2, borderRadius: 2 }}>
                 {loading ? 'Sending...' : 'Submit'}
             </Button>
         </form>
-    </Box>
+    </Paper>
 )
 
 }
