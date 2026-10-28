@@ -1,6 +1,6 @@
 import {ChangeEvent} from "react";
 import React from "react";
-import {Button, TextField, Typography, Alert, Paper} from "@mui/material";
+import {Button, TextField, Typography, Alert, Box} from "@mui/material";
 import emailjs from '@emailjs/browser';
 
 interface FormData{
@@ -110,7 +110,7 @@ return (
                 {loading ? 'Sending...' : 'Submit'}
             </Button>
         </form>
-    </Paper>
+    </Box>
 )
 
 }

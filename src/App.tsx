@@ -15,6 +15,10 @@ import { Presentation } from './Components/Presentation';
 import { Project } from './Components/Project';
 import { Technologies } from './Components/Technologies';
 
+const drawerItemSx = {
+  '&:hover': { bgcolor: 'rgba(20,77,125,0.08)' },
+};
+
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -41,9 +45,6 @@ function App() {
           }}
         >
           <Toolbar sx={{
-            width: '100%',
-            maxWidth: 1280,
-            mx: 'auto',
             flexWrap: 'wrap',
             gap: { xs: 0.5, md: 1 },
             justifyContent: 'space-between',

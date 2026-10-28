@@ -39,7 +39,6 @@ const PhotoSlider = ({ photos, isDark = false }: PhotoSliderProps) => {
                 sx={{
                     width: '100%',
                     maxWidth: 640,
-                    maxWidth: 640,
                     height: 'auto',
                     borderRadius: '10px',
                     justifyContent: 'center',
@@ -48,14 +47,11 @@ const PhotoSlider = ({ photos, isDark = false }: PhotoSliderProps) => {
                     flexDirection: 'column',
                 }}
             >
-                }}
-            >
                 <img
                     src={currentPhoto.src}
                     alt={currentPhoto.caption || `Slide ${currentIndex + 1}`}
                     style={{
                         width: '100%',
-                        maxWidth: '540px',
                         maxWidth: '540px',
                         height: 'auto',
                         aspectRatio: '4/3',
