@@ -62,9 +62,18 @@ const Contact   = () => {
 
 return (
     <Box sx={{display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', justifyContent: 'center', py: 4, maxWidth: 600, mx: 'auto'}}>
-        <Typography variant="h4">
-            Contact!
+      <Box sx={{ textAlign: 'center', maxWidth: 780, mx: 'auto', mb: 4 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 800,
+            fontSize: { xs: '1.9rem', md: '2.4rem' },
+            color: 'text.primary',
+          }}
+        >
+            Contact me!
         </Typography>
+      </Box>
         
         {status === 'success' && <Alert severity="success">Message sent successfully!</Alert>}
         {status === 'error' && <Alert severity="error">{errorMessage || 'Error sending message. Please try again.'}</Alert>}

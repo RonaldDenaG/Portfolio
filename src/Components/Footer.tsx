@@ -6,9 +6,13 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
-const Footer = () => {
+interface FooterProps {
+    isDark?: boolean;
+}
+
+const Footer = ({ isDark = false }: FooterProps) => {
     return (
-        <Box component="footer" sx = {{ py: 2, textAlign: 'center', backgroundColor: '#f5f5f5', marginTop:'auto'}}>
+        <Box component="footer" sx = {{ py: 2, textAlign: 'center', backgroundColor: isDark ? '#0d1f2f' : '#f5f5f5', color: isDark ? '#eaf4ff' : 'text.primary', marginTop:'auto'}}>
           © {new Date().getFullYear()} Ronald Dena
             <Container maxWidth="sm">
                 <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
